@@ -20,33 +20,74 @@ header img{
     display: flex;
     flex-direction: column;
 
-
 }
 
 .form-group{
 
+
+    display: flex;
     margin-top: 2rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
-    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 60%;
+
 }
 
+#middle{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
 
 #buscador{
 
     display: flex;
 }
 
-.row{
+form{
+    display: flex;
+    justify-content: center;
+    flex: 60%;
 
+}
+
+#cuadritos{
+
+    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
+    align-content: center;
+    margin-right: 7rem;
+    margin-left: 7rem;
+    flex-flow: wrap;
+}
+
+.row-sm{
+
+    margin-bottom: 2rem;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
 
 }
 
 .col-sm{
 
+    margin-top: 2rem;
+    width: 15rem;
+    height: 15rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 4px;
 
 }
+
+.col-sm:hover {
+    box-shadow: 0 0 2px 2px #64dba4;
+}
+
