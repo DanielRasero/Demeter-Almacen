@@ -70,6 +70,14 @@ header img{
 
 }
 
+.introtexto{
+
+    justify-content: space-around;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
 #middle{
 
     display: flex;
