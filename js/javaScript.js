@@ -30,3 +30,20 @@ for (let i = 0; i < 10; i++) {
     document.getElementById("cuadritos").innerHTML+= fila;
 }
 
+
+function listado() {
+
+    var objeto= document.getElementById("cuadritos");
+    objeto.innerHTML="";
+
+    for (let i = 0; i < 10; i++) {
+
+        let fila="<div class='row-sm'>";
+
+        fila+="<div id="+i+" class='col-sm' id='col-lista'>"+objetosDemeter.objetos[i].fotos+"</div>";
+        fila+="<div id="+i+"'colum' class='col-7'>"+objetosDemeter.objetos[i].nombre+"</div>";
+
+        fila+= "</div>";
+        document.getElementById("cuadritos").innerHTML+= fila;
+    }
+}

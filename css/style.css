@@ -132,6 +132,28 @@ form{
 
 }
 
+#col-lista{
+
+    margin-top: 2rem;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 4px;
+
+}
+
+.col-7{
+
+    margin-top: 2rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 4px;
+
+}
 .col-sm:hover {
     box-shadow: 0 0 2px 2px #64dba4;
 }
