@@ -1,5 +1,5 @@
 
-body{ background-color: whitesmoke;
+body{ background-color: #f2f2f2;
     background-size: cover;}
 
 
@@ -22,6 +22,36 @@ header img{
 
 }
 
+#fila-superior{
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+#modo-ver{
+    display: flex;
+    justify-content: center;
+}
+
+.ver{
+
+      margin-left: 3rem;
+      }
+
+#grid{
+
+    margin-top: 28px;
+    width: 2rem;
+    height: 2rem;
+
+}
+#lista{
+      margin-top: 20px;
+       width: 2.5rem;
+       height: 3rem;}
+
 .form-group{
 
 
@@ -29,7 +59,14 @@ header img{
     margin-top: 2rem;
     justify-content: center;
     flex-direction: column;
-    flex-basis: 60%;
+    flex-basis: 70%;
+
+}
+
+#formularios{
+
+    display: flex;
+    justify-content: space-between;
 
 }
 

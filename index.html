@@ -26,20 +26,38 @@
 
   <div id="middle">
 
-      <form>
+      <div id="fila-superior">
 
-          <div class="form-group">
+          <div id="modo-ver">
 
-              <div>
-                  <label for="buscador"><h4>Buscador de piezas:  </h4></label>
-              </div>
-
-              <div>
-              <input type="text" class="form-control" id="buscador" placeholder="Nombre, Tipo, Características, Cantidad, Fotos, Precio, Web proveedor" >
-              </div>
+              <img src="imagenes/menu.svg" alt="" id="grid" class="ver">
+              <img src="imagenes/opcion-de-listado.svg" alt="" id="lista" class="ver">
 
           </div>
-      </form>
+
+
+          <form>
+
+              <div class="form-group">
+
+                 <div>
+                  <label><h4>Buscador de piezas:  </h4></label>
+                 </div>
+
+                 <div id="formularios">
+                     <input type="text" class="form-control" id="buscador-nombre" placeholder="Nombre" >
+                     <input type="text" class="form-control" id="buscador-tipo" placeholder="Tipo" >
+                     <input type="text" class="form-control" id="buscador-imagen" placeholder="Fotos" >
+                     <input type="text" class="form-control" id="buscador-web" placeholder="Web proveedor" >
+                     <input type="text" class="form-control" id="buscador-cantidad" placeholder="Cantidad" >
+                     <input type="text" class="form-control" id="buscador-precio" placeholder="Precio" >
+                     <input type="text" class="form-control" id="buscador-características" placeholder="Características" >
+                 </div>
+
+              </div>
+          </form>
+
+      </div>
 
       <div id="cuadritos">
 
