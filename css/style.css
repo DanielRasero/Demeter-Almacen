@@ -143,11 +143,17 @@ form{
     border-radius: 4px;
     display: flex;
     justify-content: space-around;
-    height: 7rem;
-    width: 60rem;
+    height: 10rem;
+    width: 55rem;
     margin-bottom: 2rem ;
 }
 
 .list-group-item:hover {
     box-shadow: 0 0 2px 2px #64dba4;
+}
+
+.img-lista > img{
+
+    height: 7rem;
+    width: 7rem;
 }

@@ -3,19 +3,19 @@ let objetosDemeter={
 
     "objetos":[
 
-        {"nombre":"Objeto1","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto2","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto3","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto4","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto5","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto6","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto7","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto8","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"Objeto9","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""},
-        {"nombre":"","tipo":"","caracteristicas":"","fotos":"","precio":"","web":""}
+        {"nombre":"Objeto1","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto2","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto3","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto4","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto5","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto6","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto7","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto8","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto9","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto10","tipo":"","caracteristicas":"","fotos":"imagenes/menu.svg","precio":"","web":""},
+        {"nombre":"Objeto11","tipo":"","caracteristicas":"","fotos":"imagenes/","precio":"","web":""},
+        {"nombre":"Objeto12","tipo":"","caracteristicas":"","fotos":"imagenes/","precio":"","web":""},
+        {"nombre":"Objeto13","tipo":"","caracteristicas":"","fotos":"imagenes/","precio":"","web":""}
     ]
 };
 
@@ -41,7 +41,7 @@ function listado() {
     for (let i = 0; i < 10; i++) {
 
         fila+="<li class='list-group-item'> " +
-            "<div class='img-lista'>"+objetosDemeter.objetos[i].fotos+"</div>" +
+            "<div class='img-lista'><img src='"+objetosDemeter.objetos[i].fotos+"' alt=''></div>" +
             "<div class='nombre-lista'>"+objetosDemeter.objetos[i].nombre+" </div>" +
             "</li>";
     }
