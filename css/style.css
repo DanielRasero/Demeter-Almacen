@@ -126,7 +126,8 @@ form{
     width: 15rem;
     height: 15rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
     border-radius: 4px;
 
@@ -152,8 +153,12 @@ form{
     box-shadow: 0 0 2px 2px #64dba4;
 }
 
+.img-lista{display: flex ;justify-content: center}
+
 .img-lista > img{
 
     height: 7rem;
     width: 7rem;
 }
+
+#nombre-grid{ display: flex; justify-content: center}
