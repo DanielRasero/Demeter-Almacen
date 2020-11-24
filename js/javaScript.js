@@ -5,7 +5,7 @@ let objetosDemeter={
         name: "Cutter",
         kind: "tool",
         quantity: 1,
-        picture: "cutter-svgrepo-com.svg",
+        picture: ["cutter-svgrepo-com.svg"],
         price: 30,
         website: "https://www.fullertool.com/product/5pc-pro-bolt-cutter-assortment/"
     },
@@ -13,7 +13,7 @@ let objetosDemeter={
             name: "Axe",
             kind: "tool",
             quantity: 1,
-            picture: "hacha.svg",
+            picture: ["hacha.svg"],
             price: 10,
             website: "https://www.fullertool.com/product/1-1-2-lb-graphite-core-axe/"
         },
@@ -21,7 +21,7 @@ let objetosDemeter={
             name: "Wrench",
             kind: "tool",
             quantity: 1,
-            picture: "llave-inglesa.svg",
+            picture: ["llave-inglesa.svg"],
             price: 5,
             website: "https://www.fullertool.com/product/pro-metric-combination-wrenches/"
         },
@@ -29,7 +29,7 @@ let objetosDemeter={
             name: "pipe wrench",
             kind: "tool",
             quantity: 1,
-            picture: "adjustable-wrench.svg",
+            picture: ["adjustable-wrench.svg"],
             price: 10,
             website: "https://www.fullertool.com/product/pro-adjustable-pipe-wrenches/"
         },
@@ -37,7 +37,7 @@ let objetosDemeter={
             name: "Hammer",
             kind: "tool",
             quantity: 1,
-            picture: "martillo.svg",
+            picture: ["martillo.svg"],
             price: 3,
             website: ""
         },
@@ -45,7 +45,7 @@ let objetosDemeter={
             name: "Screwdriver",
             kind: "tool",
             quantity: 1,
-            picture: "destornillador.svg",
+            picture: ["destornillador.svg"],
             price: 1,
             website: ""
         },
@@ -53,7 +53,7 @@ let objetosDemeter={
             name: "Ruler",
             kind: "tool",
             quantity: 1,
-            picture: "gobernante.svg",
+            picture: ["gobernante.svg"],
             price: 5,
             website: "https://www.fullertool.com/product/slot-head-pro-screwdrivers/"
         },
@@ -61,7 +61,7 @@ let objetosDemeter={
             name: "motor",
             kind: "part",
             quantity: 1,
-            picture: "motor-electrico.svg",
+            picture: ["motor-electrico.svg"],
             price: 30,
             website: "https://torro.lv/tubular-motors/AM35MEL-RF-6-28-rf-radio-control"
         },
@@ -69,7 +69,7 @@ let objetosDemeter={
             name: "Platine",
             kind: "part",
             quantity: 4,
-            picture: "placa-base.svg",
+            picture: ["placa-base.svg","platine-leopard.jpg"],
             price: 55,
             website: "https://www.torro-shop.de/24-GHz-Platine-Leopard"
         },
@@ -77,7 +77,7 @@ let objetosDemeter={
             name: "Wechselquarze",
             kind: "part",
             quantity: 1,
-            picture: "wechselquarze.svg",
+            picture: ["wechselquarze.svg"],
             price: 25,
             website: "https://www.torro-shop.de/wechselquarze-quarze-no-02-fuer-panzer-fernbedienung-der-heng-long-panzer"
         }
@@ -94,12 +94,12 @@ objetosJson = JSON.parse(JSON.stringify(objetosDemeter.objetos));
 
 var estiloPag= "grideado";
 
+
 for (let i = 1; i < objetosJson.length; i++) {
 
     generarGrid(i);
 
 }
-
 
 
 function generarGrid(num) {
@@ -112,30 +112,25 @@ function generarGrid(num) {
     var nombreObj= cuadrObjeto.appendChild(document.createElement('h3'));
     var precio= cuadrObjeto.appendChild(document.createElement('p'));
 
-    /*
-    *   <div>
-            <article>
-            *
-            * <img src=''/>
-            * <h3></h3>
-            *  <p> </p>
-            *
-            * </article>
-    *   </div>
-    * */
 
-    imagen.setAttribute('src', "imagenes/"+objetosJson[num].picture);
+    imagen.setAttribute('src', "imagenes/"+objetosJson[num].picture[0]);
 
     nombreObj.innerHTML= objetosJson[num].name;
     precio.innerHTML= objetosJson[num].price+' €';
 
     cuadrObjeto.setAttribute('class','col-sm');
+    cuadrObjeto.setAttribute('id','cuadradin');
+    cuadrObjeto.setAttribute('data-toggle', 'modal');
+    cuadrObjeto.setAttribute('data-target','#exampleModal')
+    cuadrObjeto.setAttribute('onclick', 'showModal('+num+')');
+
 
 }
 
 function generarRow(num) {
 
     cuadrObjeto= document.createElement('article');
+
 
     divContenedor.appendChild(cuadrObjeto);
 
@@ -144,13 +139,17 @@ function generarRow(num) {
     precio= cuadrObjeto.appendChild(document.createElement('p'));
 
     //cuadrObjeto.setAttribute('onclick', 'openModal('+num+')');
-    imagen.setAttribute('src', 'imagenes/'+objetosJson[num].picture);
+    imagen.setAttribute('src', 'imagenes/'+objetosJson[num].picture[0]);
 
     nombreObj.innerHTML= objetosJson[num].name;
     precio.innerHTML= objetosJson[num].price+' €';
 
-
     cuadrObjeto.setAttribute('class','list-group-item');
+    cuadrObjeto.setAttribute('data-toggle', 'modal');
+    cuadrObjeto.setAttribute('data-target','#exampleModal')
+    cuadrObjeto.setAttribute('onclick', 'showModal('+num+')');
+
+
 
 }
 
@@ -165,6 +164,8 @@ function listar(){
     }
 
 }
+
+
 
 function gridear(){
 
@@ -187,15 +188,39 @@ function ordenarAscend() {
 
     divContenedor.innerHTML="";
 
-     if (estiloPag=="listado"){
+    if (document.getElementById('sel1').value== "Todas") {
 
-          listar();
+        if (estiloPag == "listado") {
 
-     }else if (estiloPag== "grideado"){
+            listar();
 
-         gridear();
+        } else if (estiloPag == "grideado") {
 
-     }
+            gridear();
+
+        }
+
+    }else{
+
+        for (let i = 0; i < objetosJson.length; i++) {
+
+            if (objetosJson[i].kind == document.getElementById('sel1').value) {
+
+                if (estiloPag == "listado") {
+
+                    generarRow(i);
+
+                } else if (estiloPag == "grideado") {
+
+                    generarGrid(i);
+
+                }
+
+            }
+
+        }
+
+    }
 
 }
 
@@ -207,52 +232,144 @@ function ordenarDescend() {
 
     divContenedor.innerHTML="";
 
-    if (estiloPag=="listado"){
+    if (document.getElementById('sel1').value== "Todas") {
 
-        listar();
+        if (estiloPag == "listado") {
 
-    }else if (estiloPag== "grideado"){
+            listar();
 
-        gridear();
+        } else if (estiloPag == "grideado") {
 
-    }
-
-}
-
-
-
-let btn = document.querySelector('input');
-
-btn.onkeyup = function(event) {
-
-    let letra = String.fromCharCode(event.key);
-
-    var objeto = document.getElementById("cuadritos");
-    objeto.innerHTML = "";
-
-
-    for (let i = 0; i < 10; i++) {
-
-        let fila = "<div class='row-sm'>";
-
-        if (objetosDemeter.objetos[i].nombre.contains(letra)) {
-
-            fila += "<div id=" + i + " class='col-sm'>" +
-                "<div class='img-lista'><img src='" + objetosDemeter.objetos[i].fotos + "' alt=''></div>" +
-
-                "<div id='nombre-grid'>" + objetosDemeter.objetos[i].nombre + "</div>" +
-                "" +
-                "</div>";
+            gridear();
 
         }
-        fila += "</div>";
-        document.getElementById("cuadritos").innerHTML += fila;
 
-        estiloPag = "grideadisimo";
+    }else{
+
+        for (let i = 0; i < objetosJson.length; i++) {
+
+            if (objetosJson[i].kind == document.getElementById('sel1').value) {
+
+                if (estiloPag == "listado") {
+
+                    generarRow(i);
+
+                } else if (estiloPag == "grideado") {
+
+                    generarGrid(i);
+
+                }
+
+            }
+
+        }
+
     }
-
 
 }
 
 
+function filtrarNombre() {
 
+    var contEncontrado = 0;
+
+    document.getElementById('cuadritos').innerHTML="";
+
+    for (let i = 0; i < objetosJson.length; i++) {
+
+        if (objetosJson[i].name.includes(document.getElementById('buscador-nombre').value)) {
+
+            if (estiloPag=="listado"){
+
+               generarRow(i);
+
+            }else if (estiloPag== "grideado"){
+
+                generarGrid(i);
+
+            }
+
+            contEncontrado++;
+        }
+
+    }
+
+    if (contEncontrado == 0) {
+
+        var mensaje= divContenedor.appendChild(document.createElement("h1"));
+        mensaje.innerHTML= "Ningún objeto encontrado";
+    }
+
+}
+
+function filtrarTipo() {
+
+    document.getElementById('cuadritos').innerHTML="";
+
+    if (document.getElementById('sel1').value== "Todas"){
+
+        if (estiloPag=="listado"){
+
+            listar();
+
+        }else if (estiloPag== "grideado"){
+
+            gridear();
+
+        }
+
+    }else {
+
+        for (let i = 0; i < objetosJson.length; i++) {
+
+            if (objetosJson[i].kind == document.getElementById('sel1').value) {
+
+                if (estiloPag == "listado") {
+
+                    generarRow(i);
+
+                } else if (estiloPag == "grideado") {
+
+                    generarGrid(i);
+
+                }
+
+            }
+
+        }
+    }
+}
+
+document.addEventListener('keyup', function (event) { filtrarNombre();});
+
+
+
+  function showModal(num){
+
+      document.getElementById("exampleModalLabel").innerHTML= objetosJson[num].name;
+
+      document.getElementById("fotos-carousel").innerHTML=
+          "<div class='carousel-item active'>"+
+          "<img src='imagenes/"+objetosJson[num].picture[0]+"'>"+
+          "</div>";
+
+
+      if ( objetosJson[num].picture.length > 1){
+
+          for (let i = 1; i < objetosJson[num].picture.length; i++) {
+              document.getElementById("fotos-carousel").innerHTML+=
+                  "<div class='carousel-item'>"+
+                  "<img src='imagenes/"+objetosJson[num].picture[i]+"'>"+
+                  "</div>";
+
+          }
+      }
+
+          document.getElementById("resto-modal").innerHTML=
+          "<p>"+objetosJson[num].kind+"</p>" +
+          "<p>"+objetosJson[num].price+" €</p>" +
+          "<a href='"+objetosJson[num].website+"'>Link de compra</a>";
+
+      $('#exampleModal').modal('show');
+
+  }

@@ -44,7 +44,12 @@
 
                  <div id="formularios">
                      <input type="text" class="form-control" id="buscador-nombre" placeholder="Nombre" class="introtexto">
-                     <input type="text" class="form-control" id="buscador-tipo" placeholder="Tipo" class="introtexto">
+                     <label for="sel1">Selecciona una categoría:</label>
+                     <select class="form-control" onchange="filtrarTipo()" id="sel1">
+                         <option id="todasCat">Todas</option>
+                         <option id="cat1">tool</option>
+                         <option id="cat2">part</option>
+                     </select>
 
                  </div>
 
@@ -64,13 +69,45 @@
 
       <div id="cuadritos">
 
+
+
       </div>
+
+      <!-- Modal -->
+
 
   </div>
 
   <footer>
 
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body" id="cuerpo-modal">
 
+                      <div id="demo" class="carousel slide" data-ride="carousel">
+
+                          <div class="carousel-inner" id="fotos-carousel">
+
+                          </div>
+
+                      </div>
+
+                      <div id="resto-modal">
+
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
 
   </footer>
 
