@@ -1,16 +1,16 @@
 
 body{ background-color: #f2f2f2;
-    background-size: cover;}
+    background-size: cover;
+    box-sizing: border-box;
+    }
 
 
 header img{
 
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    margin-top: 0;
+    height: 20%;
     width: 100%;
     display: flex;
-    justify-content: stretch;
     z-index: -1;
 
 }
@@ -54,7 +54,7 @@ header img{
 
 .form-group{
 
-
+    flex: 60%;
     display: flex;
     margin-top: 2rem;
     justify-content: center;
@@ -63,12 +63,24 @@ header img{
 
 }
 
+.container-cosos{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-right: 30%;
+}
+
 #formularios{
 
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
 
 }
+
+#botones{display: flex}
+
 
 .introtexto{
 
@@ -91,12 +103,6 @@ header img{
     display: flex;
 }
 
-form{
-    display: flex;
-    justify-content: center;
-    flex: 60%;
-
-}
 
 #cuadritos{
 
@@ -108,6 +114,8 @@ form{
     margin-left: 7rem;
     flex-flow: wrap;
 }
+
+article{ display: flex; justify-content: space-between}
 
 .row-sm{
 
@@ -122,22 +130,22 @@ form{
 
 .col-sm{
 
-    margin-top: 2rem;
+    margin:2rem;
     width: 15rem;
     height: 15rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     background-color: white;
     border-radius: 4px;
 
 }
 
+
+
 .col-sm:hover {
     box-shadow: 0 0 2px 2px #64dba4;
 }
-
-.list-group{display: flex;}
 
 .list-group-item{
 
@@ -146,19 +154,35 @@ form{
     justify-content: space-around;
     height: 10rem;
     width: 55rem;
-    margin-bottom: 2rem ;
+    margin: 2rem ;
+}
+
+
+.list-group-item > p{
+
+    display: flex;
+    align-self: center;
+}
+
+.list-group-item > h3{
+
+    display: flex;
+    align-self: center;
 }
 
 .list-group-item:hover {
     box-shadow: 0 0 2px 2px #64dba4;
 }
 
-.img-lista{display: flex ;justify-content: center}
+p{ text-align: center}
 
-.img-lista > img{
+ img{
 
-    height: 7rem;
-    width: 7rem;
+     margin-top: 1.7rem;
+    height: 6rem;
+    width: 6rem;
 }
 
 #nombre-grid{ display: flex; justify-content: center}
+
+.parrafoOrden{margin-top: 1rem}

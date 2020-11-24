@@ -30,14 +30,12 @@
 
           <div id="modo-ver">
 
-              <img src="imagenes/menu.svg" alt="" id="grid" class="ver" onclick="grideado()">
-              <img src="imagenes/opcion-de-listado.svg" alt="" id="lista" class="ver" onclick="listado()">
+              <img src="imagenes/menu.svg" alt="" id="grid" class="ver" onclick="gridear()">
+              <img src="imagenes/opcion-de-listado.svg" alt="" id="lista" class="ver" onclick="listar()">
 
           </div>
 
-
-          <form>
-
+          <div class="container-cosos">
               <div class="form-group">
 
                  <div>
@@ -47,11 +45,20 @@
                  <div id="formularios">
                      <input type="text" class="form-control" id="buscador-nombre" placeholder="Nombre" class="introtexto">
                      <input type="text" class="form-control" id="buscador-tipo" placeholder="Tipo" class="introtexto">
-                     <input type="text" class="form-control" id="buscador-precio" placeholder="Precio" class="introtexto">
+
                  </div>
 
               </div>
-          </form>
+
+               <div class="botones">
+
+                   <label>Ordenar por precio: </label>
+                   <button class="parrafoOrden btn btn-primary" onclick="ordenarAscend()"> De mayor a menor precio </button>
+                   <button class="parrafoOrden btn btn-primary" onclick="ordenarDescend()"> De menor a mayor precio</button>
+
+               </div>
+
+          </div>
 
       </div>
 
