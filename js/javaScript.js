@@ -1,19 +1,21 @@
 
 let objetosDemeter={
 
-    objetos:[{
+    objetos:[
+        {
         name: "Cutter",
         kind: "tool",
         quantity: 1,
-        picture: ["cutter-svgrepo-com.svg"],
+        picture: ["cutter-svgrepo-com.svg","cutter.png", "cutter2.png", "cutter3.png"],
         price: 30,
         website: "https://www.fullertool.com/product/5pc-pro-bolt-cutter-assortment/"
-    },
+        },
+
         {
             name: "Axe",
             kind: "tool",
             quantity: 1,
-            picture: ["hacha.svg"],
+            picture: ["hacha.svg","axe.png", "axe2.png", "axe3.png"],
             price: 10,
             website: "https://www.fullertool.com/product/1-1-2-lb-graphite-core-axe/"
         },
@@ -21,7 +23,7 @@ let objetosDemeter={
             name: "Wrench",
             kind: "tool",
             quantity: 1,
-            picture: ["llave-inglesa.svg"],
+            picture: ["llave-inglesa.svg","wrench.png", "wrench2.png", "wrench4.png"],
             price: 5,
             website: "https://www.fullertool.com/product/pro-metric-combination-wrenches/"
         },
@@ -29,7 +31,7 @@ let objetosDemeter={
             name: "pipe wrench",
             kind: "tool",
             quantity: 1,
-            picture: ["adjustable-wrench.svg"],
+            picture: ["adjustable-wrench.svg","pipewrench.png", "pipewrench2.png", "pipewrenchmaxi.png"],
             price: 10,
             website: "https://www.fullertool.com/product/pro-adjustable-pipe-wrenches/"
         },
@@ -37,7 +39,7 @@ let objetosDemeter={
             name: "Hammer",
             kind: "tool",
             quantity: 1,
-            picture: ["martillo.svg"],
+            picture: ["martillo.svg","hammer.png", "hammerchico.png", "hammerbig.png"],
             price: 3,
             website: ""
         },
@@ -45,7 +47,7 @@ let objetosDemeter={
             name: "Screwdriver",
             kind: "tool",
             quantity: 1,
-            picture: ["destornillador.svg"],
+            picture: ["destornillador.svg","screwdriver.png", "screwdrivermaxi.png", "screwdrivermin.png"],
             price: 1,
             website: ""
         },
@@ -53,7 +55,7 @@ let objetosDemeter={
             name: "Ruler",
             kind: "tool",
             quantity: 1,
-            picture: ["gobernante.svg"],
+            picture: ["gobernante.svg","ruler.png"],
             price: 5,
             website: "https://www.fullertool.com/product/slot-head-pro-screwdrivers/"
         },
@@ -61,7 +63,7 @@ let objetosDemeter={
             name: "motor",
             kind: "part",
             quantity: 1,
-            picture: ["motor-electrico.svg"],
+            picture: ["motor-electrico.svg","motor.png"],
             price: 30,
             website: "https://torro.lv/tubular-motors/AM35MEL-RF-6-28-rf-radio-control"
         },
@@ -69,7 +71,7 @@ let objetosDemeter={
             name: "Platine",
             kind: "part",
             quantity: 4,
-            picture: ["placa-base.svg","platine-leopard.jpg"],
+            picture: ["placa-base.svg","platine-leopard.jpg","Platine.png", "Platinebig.png"],
             price: 55,
             website: "https://www.torro-shop.de/24-GHz-Platine-Leopard"
         },
@@ -77,10 +79,93 @@ let objetosDemeter={
             name: "Wechselquarze",
             kind: "part",
             quantity: 1,
-            picture: ["wechselquarze.svg"],
+            picture: ["wechselquarze.svg","Wechselquarze.png", "quarze.png"],
+            price: 25,
+            website: "https://www.torro-shop.de/wechselquarze-quarze-no-02-fuer-panzer-fernbedienung-der-heng-long-panzer"
+        },
+
+        {
+            name: "Cutter",
+            kind: "tool",
+            quantity: 1,
+            picture: ["cutter-svgrepo-com.svg","cutter.png", "cutter2.png", "cutter3.png"],
+            price: 30,
+            website: "https://www.fullertool.com/product/5pc-pro-bolt-cutter-assortment/"
+        },
+
+        {
+            name: "Axe",
+            kind: "tool",
+            quantity: 1,
+            picture: ["hacha.svg","axe.png", "axe2.png", "axe3.png"],
+            price: 10,
+            website: "https://www.fullertool.com/product/1-1-2-lb-graphite-core-axe/"
+        },
+        {
+            name: "Wrench",
+            kind: "tool",
+            quantity: 1,
+            picture: ["llave-inglesa.svg","wrench.png", "wrench2.png", "wrench4.png"],
+            price: 5,
+            website: "https://www.fullertool.com/product/pro-metric-combination-wrenches/"
+        },
+        {
+            name: "pipe wrench",
+            kind: "tool",
+            quantity: 1,
+            picture: ["adjustable-wrench.svg","pipewrench.png", "pipewrench2.png", "pipewrenchmaxi.png"],
+            price: 10,
+            website: "https://www.fullertool.com/product/pro-adjustable-pipe-wrenches/"
+        },
+        {
+            name: "Hammer",
+            kind: "tool",
+            quantity: 1,
+            picture: ["martillo.svg","hammer.png", "hammerchico.png", "hammerbig.png"],
+            price: 3,
+            website: ""
+        },
+        {
+            name: "Screwdriver",
+            kind: "tool",
+            quantity: 1,
+            picture: ["destornillador.svg","screwdriver.png", "screwdrivermaxi.png", "screwdrivermin.png"],
+            price: 1,
+            website: ""
+        },
+        {
+            name: "Ruler",
+            kind: "tool",
+            quantity: 1,
+            picture: ["gobernante.svg","ruler.png"],
+            price: 5,
+            website: "https://www.fullertool.com/product/slot-head-pro-screwdrivers/"
+        },
+        {
+            name: "motor",
+            kind: "part",
+            quantity: 1,
+            picture: ["motor-electrico.svg","motor.png"],
+            price: 30,
+            website: "https://torro.lv/tubular-motors/AM35MEL-RF-6-28-rf-radio-control"
+        },
+        {
+            name: "Platine",
+            kind: "part",
+            quantity: 4,
+            picture: ["placa-base.svg","platine-leopard.jpg","Platine.png", "Platinebig.png"],
+            price: 55,
+            website: "https://www.torro-shop.de/24-GHz-Platine-Leopard"
+        },
+        {
+            name: "Wechselquarze",
+            kind: "part",
+            quantity: 1,
+            picture: ["wechselquarze.svg","Wechselquarze.png", "quarze.png"],
             price: 25,
             website: "https://www.torro-shop.de/wechselquarze-quarze-no-02-fuer-panzer-fernbedienung-der-heng-long-panzer"
         }
+
     ]
 };
 
@@ -93,11 +178,12 @@ var objetosJson;
 objetosJson = JSON.parse(JSON.stringify(objetosDemeter.objetos));
 
 var estiloPag= "grideado";
+var contadorObjetos= 0;
 
-
-for (let i = 1; i < objetosJson.length; i++) {
+for (let i = 1; i < 10; i++) {
 
     generarGrid(i);
+    contadorObjetos+=i;
 
 }
 
@@ -153,14 +239,17 @@ function generarRow(num) {
 
 }
 
+
+
 function listar(){
 
     divContenedor.innerHTML="";
-
-    for (let i = 0; i < objetosJson.length; i++) {
+      contadorObjetos=0;
+    for (let i = 0; i < 10; i++) {
 
         generarRow(i);
         estiloPag= "listado";
+        contadorObjetos+=i;
     }
 
 }
@@ -170,11 +259,12 @@ function listar(){
 function gridear(){
 
     divContenedor.innerHTML="";
-
-    for (let i = 0; i < objetosJson.length; i++) {
+     contadorObjetos=0;
+    for (let i = 0; i < 10; i++) {
 
         generarGrid(i);
         estiloPag= "grideado";
+        contadorObjetos+=i;
     }
 
 }
@@ -202,7 +292,7 @@ function ordenarAscend() {
 
     }else{
 
-        for (let i = 0; i < objetosJson.length; i++) {
+        for (let i = 0; i < 10; i++) {
 
             if (objetosJson[i].kind == document.getElementById('sel1').value) {
 
@@ -373,3 +463,24 @@ document.addEventListener('keyup', function (event) { filtrarNombre();});
       $('#exampleModal').modal('show');
 
   }
+
+function alert_coords(evt) {
+   var x = evt.clientX;
+   var y = evt.clientY;
+    var h = $(window).height();
+
+    if (y == h) {
+
+        for (let i = contadorObjetos; i < (contadorObjetos + 10); i++) {
+            if (estiloPag == "listado") {
+
+                generarRow(i);
+
+            } else if (estiloPag == "grideado") {
+
+                generarGrid(i);
+
+            }
+        }
+    }
+}
